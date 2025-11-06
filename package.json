@@ -1,0 +1,30 @@
+{
+  "name": "alonea-contracts",
+  "version": "1.0.0",
+  "description": "ALONEA Sustainable Web3 Ecosystem on BSC",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy/deploy_all.js --network bscTestnet",
+    "deploy:mainnet": "hardhat run scripts/deploy/deploy_all.js --network bscMainnet",
+    "upgrade:testnet": "hardhat run scripts/deploy/upgrade_all.js --network bscTestnet",
+    "upgrade:mainnet": "hardhat run scripts/deploy/upgrade_all.js --network bscMainnet",
+    "verify:testnet": "hardhat run scripts/verify/verify_all.js --network bscTestnet",
+    "verify:mainnet": "hardhat run scripts/verify/verify_all.js --network bscMainnet",
+    "coverage": "hardhat coverage",
+    "slither": "slither .",
+    "size": "hardhat size-contracts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/hardhat-upgrades": "^3.0.0",
+    "@openzeppelin/contracts-upgradeable": "^5.0.0",
+    "hardhat": "^2.19.0",
+    "hardhat-contract-sizer": "^2.10.0",
+    "solidity-coverage": "^0.8.5",
+    "hardhat-gas-reporter": "^1.0.9"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
